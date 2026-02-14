@@ -14,6 +14,8 @@ The system allows customers to book rooms online and administrators to manage bo
 
 ### Admin Panel
 
+* username: admin
+* password: 1234
 * Secure admin login
 * Manage rooms (Add / Edit / Delete)
 * Manage bookings
