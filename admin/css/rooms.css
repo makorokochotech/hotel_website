@@ -1,0 +1,168 @@
+
+
+/* Heading styling */
+h2 {
+  color: #ffcc5b; /* warm yellow */
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 8px #ffcc5b99; /* stronger subtle glow */
+}
+
+/* Section styling */
+.add-room-form {
+  background: #fff8dc; /* soft cream, warmer than #fff5cc */
+  color: #222831; /* deeper dark blue-gray for contrast */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  max-width: 400px;
+}
+
+/* Form controls */
+.add-room-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.add-room-form input,
+.add-room-form select,
+.add-room-form textarea,
+.add-room-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-room-form input,
+.add-room-form select,
+.add-room-form textarea {
+  background: #fffef0; /* softer white */
+  color: #222831;
+  border-color: #ccc;
+}
+
+.add-room-form input:focus,
+.add-room-form select:focus,
+.add-room-form textarea:focus {
+  outline: none;
+  border-color: #ffcc5b;
+  box-shadow: 0 0 8px #ffcc5bbb;
+}
+
+.add-room-form button {
+  background: #ffcc5b;
+  color: #222831;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 12px #ffcc5baa;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.add-room-form button:hover {
+  background: #f2b600;
+  box-shadow: 0 6px 16px #f2b600cc;
+}
+
+/* Table styling */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  background: #2b2b2b; /* slightly deeper dark */
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ffcc5b66;
+  text-align: left;
+  color: #eee;
+}
+
+th {
+  background: #ffcc5b;
+  color: #222831;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+tbody tr {
+  background: #3e3e3e;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+tbody tr:hover {
+  background: #ffcc5b22; /* subtle warm highlight */
+  color: #222831;
+}
+
+/* Availability coloring */
+td.available a {
+  color: #00ff66; /* brighter green */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+td.not-available a {
+  color: #ff6666; /* softer red */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Actions */
+.delete-btn {
+  color: #ff6666;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+  color: #cc0000;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  table,
+  tbody,
+  th,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  th {
+    background: #ffcc5b;
+    color: #222831;
+    font-size: 1rem;
+    padding: 10px;
+    border-bottom: 1px solid #ffcc5b;
+  }
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ffcc5b;
+    color: #eee;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #ffcc5b;
+    display: block;
+    margin-bottom: 5px;
+  }
+}

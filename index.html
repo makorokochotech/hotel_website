@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Makorokocho Hotel</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+        <li><a href="booking.html" class="nav-link">Booking</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="admin/index.php" class="nav-link">Admin Panel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to Makorokocho Hotel</h1>
+      <p>Your perfect getaway with a view of the future in Dar es Salaam, Tanzania.</p>
+
+      <div class="slider">
+        <div class="slides">
+          <img src="image/hotellogo.png" alt="Makorokocho Hotel hotellogo" class="slider-image active">
+          <img src="image/building5.jpg" alt="Swimming Pool View" class="slider-image">
+          <img src="image/pool1.jpg" alt="Swimming Pool View" class="slider-image">
+          <img src="image/bed2.jpg" alt="Swimming Pool View" class="slider-image">
+          <img src="image/room.jpg" alt="Comfortable Room" class="slider-image">
+          <img src="image/bed1.jpg" alt="Elegant Restaurant" class="slider-image">
+          <img src="image/building1.jpg" alt="Swimming Pool View" class="slider-image">
+          <img src="image/building4.jpg" alt="Makorokocho Hotel" class="slider-image active">
+          <img src="image/building2.jpg" alt="Swimming Pool View" class="slider-image">
+          <img src="image/bed1.jpg" alt="Comfortable Room" class="slider-image">
+          <img src="image/pool5.jpg" alt="Swimming Pool View" class="slider-image">
+          <img src="image/pool4.jpg" alt="Swimming Pool View" class="slider-image">
+          <img src="image/building3.jpg" alt="Elegant Restaurant" class="slider-image"
+        </div>
+      </div>
+    </section>
+
+    <section class="location-info">
+      <h2>Our Location</h2>
+      <p>
+        Makorokocho Hotel is located in Mabibo Mwisho, Dar es Salaam, Tanzania — the heart of the city with easy access to major attractions and transport.
+      </p>
+
+      <iframe
+        src="https://www.google.com/maps?q=Mabibo+Mwisho+Dar+es+Salaam+Tanzania&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+    <section class="media">
+      <h2>Take a Virtual Tour</h2>
+      <video src="image/video.mp4" controls class="video-tour" title="Virtual tour of Makorokocho Hotel">
+      </video>
+
+      <h2>Relaxing Sounds</h2>
+      <audio controls src="image/audio.mp3" class="audio-sound">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Makorokocho Hotel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Slider script
+    const slides = document.querySelectorAll('.slider-image');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    // Initialize
+    showSlide(currentIndex);
+    setInterval(nextSlide, 4000);
+  </script>
+
+</body>
+</html>

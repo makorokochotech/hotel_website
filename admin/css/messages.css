@@ -1,0 +1,107 @@
+/* Table base styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Table header */
+thead {
+  background-color: #1e40af; /* dark blue */
+  color: #fff;
+}
+
+th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  user-select: none;
+  border-bottom: 2px solid #3b82f6; /* lighter blue border */
+}
+
+/* Table body rows */
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: #eff6ff; /* light blue hover */
+}
+
+/* Table data cells */
+td {
+  padding: 12px 15px;
+  font-size: 15px;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Buttons inside table */
+table button {
+  background-color: #ef4444; /* red */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+table button:hover {
+  background-color: #b91c1c; /* darker red */
+}
+
+/* Responsive: stack rows on small screens */
+@media (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    display: none; /* hide header row */
+  }
+
+  tbody tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  td {
+    padding: 10px 15px;
+    text-align: right;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-weight: 600;
+    color: #1e40af;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  td:last-child {
+    border-bottom: none;
+    text-align: center;
+  }
+}

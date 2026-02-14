@@ -1,0 +1,106 @@
+/* Booking table base styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Table header */
+thead {
+  background-color: #1e40af;
+  color: #ffffff;
+}
+
+th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: 2px solid #3b82f6;
+}
+
+/* Table body */
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: #eff6ff;
+}
+
+/* Table cells */
+td {
+  padding: 12px 15px;
+  color: #334155;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+/* Action button styling */
+table button {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+table button:hover {
+  background-color: #b91c1c;
+}
+
+/* Responsive view for small screens */
+@media (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+  }
+
+  td {
+    padding: 10px 15px;
+    text-align: right;
+    position: relative;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-weight: 600;
+    color: #1e40af;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  td:last-child {
+    border-bottom: none;
+    text-align: center;
+  }
+}
