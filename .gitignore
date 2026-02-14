@@ -1,0 +1,25 @@
+# XAMPP system files
+/xampp/
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node (if ever used)
+node_modules/
+
+# Composer (if used later)
+vendor/
+
+# Cache
+.cache/
